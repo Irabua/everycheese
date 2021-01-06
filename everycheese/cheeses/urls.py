@@ -9,6 +9,13 @@ urlpatterns = [
         view=views.CheeseListView.as_view(),
         name='List'
     ),
+
+path(
+        route='add/',
+        view=views.CheeseCreateView.as_view(),
+        name='add'
+    ),
+
     path(
         route='<slug:slug>/',
         view=views.CheeseDetailView.as_view(),
